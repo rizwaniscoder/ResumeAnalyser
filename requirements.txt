@@ -1,3 +1,4 @@
 llama-index
 streamlit
 openai
+pypdf
