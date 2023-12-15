@@ -4,7 +4,7 @@ import time
 import streamlit as st
 from llama_index import VectorStoreIndex, SimpleDirectoryReader, StorageContext, load_index_from_storage
 from typing import Optional
-import pandas as pd
+
 
 
 class ReportGenerator:
