@@ -1,4 +1,6 @@
-llama-index
+langchain
 streamlit
-openai
-pypdf
+pypdf2
+faiss-cpu
+pymupdf
+tiktoken
