@@ -107,7 +107,7 @@ def analyze_str(resume, options):
     option_status = st.empty()
 
     for i, option in tqdm(enumerate(options), desc="Fetching information", unit="option", ncols=100):
-        question = f"What is this candidate's {option}? Please return the answer in a concise manner, no more than 250 words. If not found, return 'Not provided'"
+        question = f"What is this candidate's {option}? Please return the answer in a concise manner, no more than 250 words. If not found, return 'Not provided'. Please always keep in mind the Job Description while anlysing."
         docs = knowledge_base.similarity_search(question)
         llm = OpenAI(openai_api_key=openai_api_key, temperature=0.3, model_name="text-davinci-003", max_tokens="2000")
         chain = load_qa_chain(llm, chain_type="stuff")
@@ -138,7 +138,7 @@ jd_text = st.file_uploader("Upload Job Description (Text or PDF)", type=["txt", 
 resume_text = st.file_uploader("Upload Candidate Resume (Text or PDF)", type=["txt", "pdf"])
 
 # Parameter input
-options = ["Name", "Contact Number", "Gender", "Age", "Years of Work Experience (Number)", "Highest Education", "Undergraduate School Name", "Master's School Name", "Employment Status", "Current Position", "List of Past Employers", "Technical Skills", "Experience Level", "Management Skills"]
+options = ["Name", "Contact Number", "Gender", "Age", "Years of Work Experience (Number)", "Highest Education", "Undergraduate School Name", "Master's School Name", "Employment Status", "Current Position", "List of Past Employers", "Technical Skills", "Experience Level", "Management Skills", "Strenghts", "Weaknesses"]
 selected_options = st.multiselect("Please select options", options, default=options)
 
 # Initialize df
