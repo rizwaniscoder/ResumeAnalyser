@@ -1,5 +1,7 @@
 # BrightPath: GPT Recruitment Analysis
 
+<img src="gpt hr 1.png">
+
 This Streamlit application analyzes resumes using GPT-3 for matching with job descriptions. It allows users to upload a job description and a candidate's resume (in text or PDF format) and select various resume elements for analysis. The application uses OpenAI's GPT-3 model to extract relevant information from the resume based on the selected elements and the provided job description.
 
 ## Features
